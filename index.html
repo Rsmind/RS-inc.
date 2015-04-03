@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="" />
+	<title>RsMind</title>
+	<link rel="stylesheet" type="text/css" href="public/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<nav>
+		<div id="h_right">
+			<div id="menu_button">
+				<span class="icon-params"></span>	
+			</div>
+		</div>
+		<div id="h_left">
+			<fig id="main_logo">
+				<img src="images/main_logo.png">
+			</fig>
+			<input id="search_box" type="search" placeholder="Ingresa tu Busqueda...">
+			<a class="search_button"><span class="icon-search"></span></a>
+		</div>
+	</nav>
+	<header>
+		<div id="suscribe_button">
+			<a id="label"><span class="icon-star"></span>Suscribir</a>
+		</div>
+		<div id="user">
+			<fig id="avatar">
+				<img src="images/avatar.jpg">
+			</fig>
+			<div id="datos">
+				<p>Rafael Moreno</p>
+				<p>Monterrey N.L</p>
+			</div>
+		</div>	
+	</header>
+	<section>
+		<div id="left">
+		</div>
+		<div id="center">
+			<article class="post">
+				<fig class="post_image">
+					<img src="">
+				</fig>
+				<h2 class="post_title">Titulo Post</h2>
+				<p class="post_date">Hace<strong>5</strong>min</p>
+				<p class="post_description">Descripcion del Post</p>
+				<a href="#">Ver mas...</a>
+				<div class="post_controls">
+					<span class="up"></span>
+					<span class="favs"></span>
+					<span class="down"></span>
+				</div>
+			</article>
+		</div>
+		<div id="right">
+		</div>
+	</section>
+	<div id="chat">
+		<ul id="messages">
+		</ul>
+		<form action="">
+			<input type="text" id="m" placeholder="Escribe tu mensaje" /><button>Enviar</button>
+		</form>
+	</div>
+	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+      var socket = io();
+      $('form').submit(function(){
+        socket.emit('chat message', $('#m').val());
+        $('#m').val('');
+        return false;
+      });
+      socket.on('chat message', function(msg){
+        $('#messages').append($('<li>').text(msg));
+      });
+    </script>
+</body>
+</html>

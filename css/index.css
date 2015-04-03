@@ -1,0 +1,194 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?7742cy');
+	src:url('fonts/icomoon.eot?#iefix7742cy') format('embedded-opentype'),
+		url('fonts/icomoon.woff?7742cy') format('woff'),
+		url('fonts/icomoon.ttf?7742cy') format('truetype'),
+		url('fonts/icomoon.svg?7742cy#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body
+{
+	font-family: "Segoe UI";
+	font-size: 18px;
+}
+nav
+{
+	height: 50px;
+	background: linear-gradient(#f0f0f0, #f0f0f0 38%, #e0e0e0);
+	box-shadow: rgba(0,0,0,0.5) 1px 1px 3px;
+}
+nav #h_left #main_logo img
+{
+	height: 45px;
+	padding: 2.5px 1.5em;
+	margin: 0em 0.5em;
+	border-left: 1px solid #3964AD;
+	border-right: 1px solid #3964AD;
+	background: linear-gradient(#659efd,#4D80D3);
+}
+nav #h_left input
+{
+	background: #f8f8f8;
+	position: absolute;
+	top: 10px;
+	height: 27px;
+	width: 500px;
+	border: 1px solid gray;
+	border-radius: 3px;
+	padding-left: 0.5em;
+}
+nav #h_left a
+{
+	position: absolute;
+	margin-top: 14px;
+	margin-left: 485px;
+}
+nav #h_left a span
+{
+	position: relative;
+}
+.icon-search:before 
+{
+	content: "\e609";
+	color: rgb(177, 166, 166);
+}
+nav #h_right
+{
+	float: right;
+	padding-right: 1em;
+	padding-top: 10px;
+}
+nav #h_right #menu_button
+{
+	font-size: 24px;
+	color: #4D80D3;
+	cursor: pointer;
+	transition: 500ms;
+}
+nav #h_right #menu_button:hover
+{
+	color: #659efd;
+}
+.icon-params:before 
+{
+	content: "\e61f";
+}
+header
+{
+	background: url(cover.jpg) center no-repeat;
+	background-size: cover;
+	height: 300px;
+	box-shadow: inset rgba(0,0,0,0.5) 0px -10px 10px;
+}
+header #user
+{
+	height: 100px;
+	width: 300px;
+	display: flex;
+	position: absolute;
+	margin-top: 11em;
+	margin-left: 1em;
+}
+header #user #avatar
+{
+	margin-right: 0.5em;
+}
+header #user #avatar img
+{
+	height: 80px;
+	border: 3px solid #f8f8f8;
+	border-radius: 3px;
+}
+header #user #datos p:first-child
+{
+	font-size: 24px;
+	margin: 0;
+	margin-top: 0.5em;
+	font-weight: bold;
+}
+header #user #datos p:last-child
+{
+	margin: 0;
+}
+header #suscribe_button
+{
+	float: right;
+	cursor: pointer;
+	margin-right: 2em;
+	margin-top: 13em;
+	background: linear-gradient(#659efd,#4D80D3);
+	padding: 5px 15px 5px 10px;
+	border-radius: 4px;
+	border: 1px solid #3964AD;
+	color: #0C3985;
+	transition: 300ms;
+}
+header #suscribe_button:hover
+{
+	color: #f8f8f8;
+}
+header #suscribe_button:active
+{
+	background: linear-gradient(#4D80D3,#659efd);
+}
+header #suscribe_button #label span
+{
+padding-right: 5px;
+}
+.icon-star:before {
+	content: "\e602";
+}
+#chat
+{
+	position: fixed;
+	bottom: 0;
+	right: 2.5em;
+	width: 240px;
+}
+#chat #messages
+{
+	margin: 0;
+	height: 325px;
+	border: 1px solid lightgray;
+	background: #F3F3F3;
+}
+#chat form
+{
+	font-size: 14px;
+}
+#chat form input
+{
+	line-height: normal;
+	border: 1px solid lightgray;
+	background: rgba(61, 165, 255,0.1);
+	width: 70.2%;
+	height: 26px;
+	padding-left: 1em;
+	overflow: hidden;
+}
+#chat form button
+{
+	border: 1px solid #3964AD;
+	background: linear-gradient(#659efd,#4D80D3);
+	width: 23%;
+	height: 30px;
+	color: #fff;
+	text-shadow: black 1px 1px 0px;
+}
